@@ -11,7 +11,7 @@ class CreateBoardgames < ActiveRecord::Migration[6.0]
       t.string :description
       t.string :image
       t.string :primary_publisher
-      t.string :designers
+      t.string :designers, array: true, default: []
       t.string :average_rating
       t.string :msrp
 
