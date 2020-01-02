@@ -19,11 +19,15 @@ class MeetupsController < ApplicationController
     meetup.update(meetup_params)
   end
 
-  def meetup_params
-    params.require(:meetup).permit(:location)
-  end
-
+  
   def destroy
     Meetup.find(params[:id]).destroy
   end
+
+  private
+  
+  def meetup_params
+    params.require(:meetup).permit(:location)
+  end
+  
 end
