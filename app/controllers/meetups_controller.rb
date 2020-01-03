@@ -1,6 +1,6 @@
 class MeetupsController < ApplicationController
   def index
-    meetups = Meetup.all
+    meetups = Meetup.order('date')
     render json: meetups, include: ["boardgame", "users"]
   end
 
@@ -25,7 +25,7 @@ class MeetupsController < ApplicationController
   end
 
   private
-  
+
   def meetup_params
     params.require(:meetup).permit(:location)
   end
