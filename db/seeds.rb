@@ -27,7 +27,7 @@ gameone = games_array["games"].map do |game|
   min_playtime: game["min_playtime"],
   max_playtime: game["max_playtime"],
   min_age: game["min_age"],
-  description: game["description"],
+  description: game["description_preview"],
   image: game["images"]["medium"],
   primary_publisher: game["primary_publisher"],
   designers: game["designers"],
